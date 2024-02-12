@@ -7,7 +7,6 @@ This is an an online store built using **Django 5**, **Tailwind CSS**, and **Alp
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Run the application](#run-the-application)
-- [Run the tests](#run-the-tests)
 - [View the application](#view-the-application)
 - [Add data to the application](#add-data-to-the-application)
 - [Copyright and License](#copyright-and-license)
