@@ -2,6 +2,8 @@
 
 This is an an online store built using **Django 5**, **Tailwind CSS**, and **Alpine.js**.
 
+![plot](https://github.com/BobsProgrammingAcademy/django-tailwind-css-alpinejs-online-store/blob/master/static/img/store.png?raw=true)
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
