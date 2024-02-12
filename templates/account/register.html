@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main class="p-5">
+  <form method="post" class="w-[400px] mx-auto p-6 my-16">
+    <h2 class="text-2xl font-semibold text-center mb-5">
+      Create an account
+    </h2>
+    <p class="text-center text-gray-500 mb-6">
+      or <a href="{% url 'account:login' %}" class="text-blue-700 font-bold hover:text-blue-600">sign in</a>
+      if you already have an account
+    </p>
+      
+    {{ user_form|crispy }}
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    <button type="submit" class="btn-primary w-full">Create an account</button>
+  </form>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .py-navbar-item {
+    @apply py-6;
+  }
+
+  .pt-navbar-item {
+    @apply pt-6;
+  }
+
+  .pb-navbar-item {
+    @apply pb-6;
+  }
+
+  .px-navbar-item {
+    @apply px-3;
+  }
+
+  .pl-navbar-item {
+    @apply pl-3;
+  }
+
+  .pr-navbar-item {
+    @apply pr-3;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-white bg-blue-700 py-2 px-4 rounded shadow-md border border-blue-700 hover:bg-transparent hover:text-blue-700 transition-colors;
+  }
+  .btn-outline-primary {
+    @apply text-blue-700 bg-transparent border border-blue-700 py-2 px-4 rounded shadow-md hover:text-white hover:bg-blue-700 active:bg-transparent transition-colors;
+  }
+}
+
+body {
+  background-color: #e5e7eb;
+}
+
+.wysiwyg-content h3,
+.wysiwyg-content h4 {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.wysiwyg-content table > tbody > tr > td {
+  padding: 0.25rem 0.125rem;
+}
+.wysiwyg-content table > tbody > tr > td:first-child {
+  font-weight: bold;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  padding: 0.5rem;
+}
+.table-sm > tbody > tr > td,
+.table-sm > thead > tr > th {
+  padding: 0.25rem;
+}

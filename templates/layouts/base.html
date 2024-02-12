@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Online Store</title>
+  </head>
+  <body class="bg-slay-100">
+    
+    {% include 'includes/header.html' %}
+
+    {% block content %}{% endblock content %}
+
+    <!-- Alpine.js Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/persist@3.10.2/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.10.2/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+  </body>
+</html>

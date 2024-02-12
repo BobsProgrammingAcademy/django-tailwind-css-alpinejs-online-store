@@ -1,0 +1,73 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main class="p-5">
+  <div>
+    <div class="mx-auto max-w-2xl px-4 pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl pt-5">Profile</h1>
+      <div class="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
+
+        <!-- My Orders -->
+        <section class="lg:col-span-7">
+          <div class="bg-white p-10 rounded-lg">
+            <h2 class="text-2xl font-medium text-gray-900 pb-10">My Orders</h2>
+            <table class='min-w-full divide-y divide-gray-300 mt-3'>
+              <thead>
+                <tr class='text-gray-900'>
+                  <th scope='col' class='px-3 py-3.5 text-left text-sm font-semibold'>Order Number</th>
+                  <th scope='col' class='px-3 py-3.5 text-left text-sm font-semibold'>Order Date</th>
+                </tr>
+              </thead>
+              <tbody class='divide-y divide-gray-200'>
+                {% for order in orders %}
+                  <tr key={order._id} class='text-gray-900'>
+                    <td class='whitespace-nowrap px-3 py-4 text-sm text-left'>
+                      {{order.id}}
+                    </td>
+                    <td class='whitespace-nowrap px-3 py-4 text-sm text-left'>
+                      {{order.date_created}}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- End My Orders -->
+  
+        <!-- User Profile -->
+        <section class="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+          <h2 class="text-2xl font-medium text-gray-900">User Profile</h2>
+          <dl class="mt-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <dt class="text-sm text-gray-600">Name:</dt>
+              <dd class="text-sm font-medium text-gray-900">{{ request.user.first_name|default:request.user.username }}</dd>
+            </div>
+            <div class="flex items-center justify-between">
+              <dt class="text-sm text-gray-600">Email:</dt>
+              <dd class="text-sm font-medium text-gray-900">{{ request.user.email }}</dd>
+            </div>
+            <div class="flex items-center justify-between">
+              <dt class="text-sm text-gray-600">Created:</dt>
+              <dd class="text-sm font-medium text-gray-900">{{ request.user.date_joined }}</dd>
+            </div>
+            <div class="flex items-center justify-between">
+              <dt class="text-sm text-gray-600">Is admin:</dt>
+              <dd class="text-sm font-medium text-gray-900">
+                {% if request.user.is_staff %}
+                  Yes
+                {% else %}
+                  No
+                {% endif %}
+              </dd>
+            </div>
+          </dl>
+        </section>
+        <!-- End User Profile -->
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}

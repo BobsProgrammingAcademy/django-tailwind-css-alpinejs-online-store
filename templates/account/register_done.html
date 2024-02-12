@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main class="p-5">
+  <form action="{% url 'account:login' %}" method="post" class="w-[400px] mx-auto p-6 my-16">
+    <p className='mt-2 text-base text-gray-700 text-left'>
+      Welcome, <span class="font-bold text-blue-700">{{ new_user.username }}</span>.
+    </p>
+    <p className='mt-2 text-base text-gray-700 text-left'>
+      Your account has been successfully created. Now you can <a href="{% url 'account:login' %}">log in</a>.
+    </p>
+    <a href="{% url 'account:login' %}" class="btn-primary w-full mt-10">Login</a>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+*.pyc
+.env
+.DS_Store
+db.sqlite3
+__pycache__/
+node_modules/
+media/
+venv/
+*/migrations/*
+!*/migrations/__init__.py
