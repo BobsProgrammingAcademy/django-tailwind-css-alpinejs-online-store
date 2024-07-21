@@ -13,7 +13,7 @@ This is an online store built using **Django 5**, **Tailwind CSS**, and **Alpine
 - [Add data to the application](#add-data-to-the-application)
 - [Copyright and License](#copyright-and-license)
 
-### Prerequisites
+## Prerequisites
 
 Install the following prerequisites:
 
@@ -22,9 +22,9 @@ Install the following prerequisites:
 2. [Node.js](https://nodejs.org/en/)
 3. [Visual Studio Code](https://code.visualstudio.com/download)
 
-### Installation
+## Installation
 
-#### 1. Create a virtual environment
+### 1. Create a virtual environment
 
 From the **root** directory, run:
 
@@ -32,7 +32,7 @@ From the **root** directory, run:
 python -m venv venv
 ```
 
-#### 2. Activate the virtual environment
+### 2. Activate the virtual environment
 
 From the **root** directory, run:
 
@@ -48,7 +48,7 @@ On Windows:
 venv\scripts\activate
 ```
 
-#### 3. Install required dependencies
+### 3. Install required dependencies
 
 From the **root** directory, run:
 
@@ -56,7 +56,7 @@ From the **root** directory, run:
 pip install -r requirements.txt
 ```
 
-#### 4. Run migrations
+### 4. Run migrations
 
 From the **root** directory, run:
 
@@ -68,7 +68,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-#### 5. Create an admin user to access the Django Admin interface
+### 5. Create an admin user to access the Django Admin interface
 
 From the **root** directory, run:
 
@@ -78,7 +78,7 @@ python manage.py createsuperuser
 
 When prompted, enter a username, email, and password.
 
-#### 6. Install required frontend dependencies
+### 6. Install required frontend dependencies
 
 From the **root** directory, run:
 
@@ -86,7 +86,7 @@ From the **root** directory, run:
 npm install
 ```
 
-### Run the application
+## Run the application
 
 From the **root** directory, run:
 
@@ -94,16 +94,16 @@ From the **root** directory, run:
 python manage.py runserver
 ```
 
-### View the application
+## View the application
 
 Go to http://127.0.0.1:8000/ to view the application.
 
-### Add data to the application
+## Add data to the application
 
 Add data through Django Admin.
 
 Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
 
-### Copyright and License
+## Copyright and License
 
 Copyright © 2024 Bob's Programming Academy. Code released under the MIT license.
