@@ -49,12 +49,14 @@
           </p>
         </div>
         <div class="flex flex-1 justify-between sm:justify-end">
+          
           {% if pages.has_previous %}
             <a href="?page={{ pages.previous_page_number }}" class="btn-primary">Previous</a>
           {% endif %}
             {% if pages.has_next %}
               <a href="?page={{ pages.next_page_number }}" class="btn-primary ml-2">Next</a>
             {% endif %}
+          
         </div>
       </nav>
     </div>
