@@ -36,6 +36,7 @@
           </span>
         </a>
       </li>
+      
       <li x-data="{open: false}" class="relative">
         <a @click="open = !open" class="cursor-pointer flex justify-between items-center py-3 px-4 hover:bg-slate-800">
           <span class="flex items-center">
@@ -62,6 +63,7 @@
         </ul>
       </li>
     </ul>
+    
     <ul>
       {% if request.user.is_authenticated %}
       <li>
@@ -81,9 +83,11 @@
                 <div></div>
               {% endif %}
             {% endwith %}
+            
           </div>
         </a>
       </li>
+      
       <li x-data="{open: false}" class="relative">
         <a @click="open = !open" class="cursor-pointer flex justify-between items-center py-3 px-4 hover:bg-slate-800">
           <span class="flex items-center">
@@ -118,7 +122,9 @@
           </li>
         </ul>
       </li>
+      
       {% else %}
+      
       <li>
         <a href="{% url 'account:login' %}" class="flex items-center py-3 px-4 transition-colors hover:bg-slate-800">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -173,6 +179,7 @@
           </svg>
         </a>
         <ul @click.outside="open = false" x-show="open" x-transition x-cloak class="absolute z-10 right-0 bg-gray-900 py-2 w-48">
+          
           {% for c in categories %}
             <li>
               <a href="{{ c.get_absolute_url }}" class="flex px-3 py-2 hover:bg-slate-900">
@@ -183,12 +190,14 @@
               </a>
             </li>
           {% endfor %}
+          
         </ul>           
       </li>
     </ul>
   </nav>
   <nav class="hidden md:block">
     <ul class="grid grid-flow-col items-center">
+      
       {% if request.user.is_authenticated %}
       <li>
         <a href="{% url 'cart:cart_detail' %}" class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900 mr-3">
@@ -196,6 +205,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           <span>Cart</span>
+          
           {% with total_items=cart|length %}
             {% if total_items > 0 %}
               <small class="inline-flex items-center rounded-full bg-blue-700 px-2 py-1 text-xs font-medium text-white ms-1">
@@ -205,6 +215,7 @@
               <div></div>
             {% endif %}
           {% endwith %}
+          
         </a>
       </li>
       <li x-data="{open: false}" class="relative">
@@ -250,7 +261,9 @@
           </li>
         </ul> 
       </li>
+      
       {% else %}
+      
       <li>
         <a href="{% url 'account:login' %}" class="flex items-center py-navbar-item px-navbar-item hover:bg-slate-900">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-5 w-5 mr-2">
@@ -264,7 +277,9 @@
           Register
         </a>
       </li>
+      
       {% endif %}
+      
     </ul>
   </nav>
   <!-- End Regular Menu -->
