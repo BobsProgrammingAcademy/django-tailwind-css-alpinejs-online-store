@@ -16,6 +16,7 @@
       
     {{ user_form|crispy }}
     {% csrf_token %}
+    
     <input type="hidden" name="next" value="{{ next }}" />
     <button type="submit" class="btn-primary w-full">Create an account</button>
   </form>
