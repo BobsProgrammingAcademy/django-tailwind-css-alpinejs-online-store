@@ -20,6 +20,7 @@
                 </tr>
               </thead>
               <tbody class='divide-y divide-gray-200'>
+                
                 {% for order in orders %}
                   <tr key={order._id} class='text-gray-900'>
                     <td class='whitespace-nowrap px-3 py-4 text-sm text-left'>
@@ -30,6 +31,7 @@
                     </td>
                   </tr>
                 {% endfor %}
+                
               </tbody>
             </table>
           </div>
@@ -55,11 +57,13 @@
             <div class="flex items-center justify-between">
               <dt class="text-sm text-gray-600">Is admin:</dt>
               <dd class="text-sm font-medium text-gray-900">
+                
                 {% if request.user.is_staff %}
                   Yes
                 {% else %}
                   No
                 {% endif %}
+                
               </dd>
             </div>
           </dl>
