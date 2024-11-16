@@ -50,6 +50,7 @@
           </svg>
         </a>
         <ul x-show="open" x-transition class="z-10 right-0 bg-gray-900 py-2">
+          
           {% for c in categories %}
             <li>
               <a href="{{ c.get_absolute_url }}" class="flex px-3 py-2 hover:bg-slate-900">
@@ -60,11 +61,13 @@
               </a>
             </li>
           {% endfor %}
+          
         </ul>
       </li>
     </ul>
     
     <ul>
+      
       {% if request.user.is_authenticated %}
       <li>
         <a href="{% url 'cart:cart_detail' %}" class="relative flex items-center justify-between py-3 px-4 transition-colors hover:bg-slate-800">
@@ -139,6 +142,7 @@
         </a>
       </li>
       {% endif %}
+      
     </ul>
 
   </div>
@@ -199,6 +203,7 @@
     <ul class="grid grid-flow-col items-center">
       
       {% if request.user.is_authenticated %}
+      
       <li>
         <a href="{% url 'cart:cart_detail' %}" class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900 mr-3">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="h-5 w-5 mr-2">
@@ -291,4 +296,5 @@
     </svg>
   </button>
   <!-- End Menu Button -->
+  
 </header>
