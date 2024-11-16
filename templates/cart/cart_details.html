@@ -29,6 +29,7 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
+                  
                   {% for item in cart %}
                     {% with product=item.product %}
                       <tr class="border-b border-gray-300">
@@ -57,6 +58,7 @@
                       </tr>
                     {% endwith %}
                   {% endfor %}
+                  
                 </tbody>
                 <tfoot>
                   <tr>
