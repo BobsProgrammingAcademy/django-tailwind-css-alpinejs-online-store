@@ -103,6 +103,7 @@
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </a>
+        
         <ul x-show="open" x-transition class="z-10 right-0 bg-gray-900 py-2">
           <li>
             <a href="{% url 'account:profile' %}" class="flex px-3 py-2 hover:bg-slate-900">
@@ -112,6 +113,7 @@
               My Profile
             </a>
           </li>
+          
           <li class="hover:bg-slate-900">
             <form method="post" action="{% url 'account:logout' %}?next=/">
               {% csrf_token %}
@@ -136,6 +138,7 @@
           Login
         </a>
       </li>
+      
       <li class="px-3 py-3">
         <a href="{% url 'account:register' %}" class="block text-center text-white bg-blue-700 py-2 px-3 rounded shadow-md hover:bg-blue-500 active:bg-blue-800 transition-colors w-full">
           Register
@@ -161,6 +164,7 @@
           </span>
         </a>
       </li>
+      
       <li x-data="{open: false}" class="relative">
         <a @click="open = !open" class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900">
           <span class="flex items-center">
@@ -182,6 +186,7 @@
             />
           </svg>
         </a>
+        
         <ul @click.outside="open = false" x-show="open" x-transition x-cloak class="absolute z-10 right-0 bg-gray-900 py-2 w-48">
           
           {% for c in categories %}
@@ -244,6 +249,7 @@
             />
           </svg>
         </a>
+        
         <ul @click.outside="open = false" x-show="open" x-transition x-cloak class="absolute z-10 right-0 bg-gray-900 py-2 w-48">
           <li>
             <a href="{% url 'account:profile' %}" class="flex px-3 py-2 hover:bg-slate-900">
@@ -253,6 +259,7 @@
               My Profile
             </a>
           </li>
+          
           <li>
             <form method="post" action="{% url 'account:logout' %}?next=/">
               {% csrf_token %}
@@ -277,6 +284,7 @@
           Login
         </a>
       </li>
+      
       <li>
         <a href="{% url 'account:register' %}" class="inline-flex items-center text-white bg-blue-700 py-2 px-3 rounded shadow-md hover:bg-blue-500 active:bg-blue-800 transition-colors mx-5">
           Register
